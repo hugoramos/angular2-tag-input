@@ -14,7 +14,9 @@
   "scripts": {
     "clean": "./node_modules/.bin/rimraf ./dist/",
     "package:aot": "npm run clean && npm run build:aot",
+    "package": "npm run clean && npm run build",
     "build:aot": "./node_modules/.bin/ngc -p tsconfig-aot.json",
+    "build": "./node_modules/.bin/ngc -p tsconfig.json",
     "serve": "webpack-dev-server --config config/webpack.dev.js --progress --profile --watch --content-base demo/",
     "lint": "tslint lib/**.*.ts"
   },
